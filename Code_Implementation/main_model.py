@@ -37,7 +37,7 @@ if __name__ == "__main__":
             device = torch.device('cuda:' + str(args.gpuid) if torch.cuda.is_available() else 'cpu')
             if args.model == 'alexnet':
                 model = net_alexnet.alexnet(bits, args.flag, args.gpuid, args.quant_mode, args.net_mode, args.reserve_interval, args.alpha, args.beta, args.csv_path, args.csv_name)
-                model_weight_path = './alexnet.pth'
+                model_weight_path = './alexnet.pth' # pretrained model
             if args.model == 'resnet18':
                 model = net_resnet.resnet18(bits, args.flag, args.gpuid, args.quant_mode, args.net_mode, args.reserve_interval, args.alpha, args.beta, args.csv_path, args.csv_name)
                 model_weight_path = './resnet18.pth'
@@ -47,7 +47,7 @@ if __name__ == "__main__":
             model.load_state_dict(torch.load(model_weight_path))
             model.to(device)
 
-            images_num = 2
+            images_num = 1000 # Define how many images are involved in the calculation
             images, labels = dataloader.loadvaldata('./DataSet/', args.gpuid, images_num)
             print('image load over')
             loader = torch.utils.data.DataLoader(images, batch_size=1, num_workers=4)
