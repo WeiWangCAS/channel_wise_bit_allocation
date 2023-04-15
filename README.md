@@ -52,7 +52,7 @@
   	csv_path, csv_name, 
   	dorefa_clip_value, 
   	fun_network_forward_inference
-  	):
+  ):
   	'''
   	x: extracted intermediate feature
   	net_structure: back-end network structure
