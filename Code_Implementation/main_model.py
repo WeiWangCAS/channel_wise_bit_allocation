@@ -18,7 +18,7 @@ parser.add_argument('--reserve_interval', default=10, type=int, help='rereserved
 parser.add_argument('--alpha', default=0.9, type=float, help='alpha')
 parser.add_argument('--beta', default=0.1, type=float, help='beta')
 parser.add_argument('--csv_path', default='./channel_allocation/', type=str, help='csv path')
-parser.add_argument('--csv_name', default='./resnet18', type=str, help='csv name')
+parser.add_argument('--csv_name', default='resnet18', type=str, help='csv name')
 args = parser.parse_args()
 
 if __name__ == "__main__":
