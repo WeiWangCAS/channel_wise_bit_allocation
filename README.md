@@ -51,7 +51,7 @@
   	reserve_interval, alpha, beta, 
   	csv_path, csv_name, 
   	dorefa_clip_value, 
-  	fun_network_forward_inference
+  	fun_network_forward_inference=network_forward_inference
   ):
   	'''
   	x: extracted intermediate feature
@@ -67,6 +67,7 @@
   - if calculating uniform quantization interval table, please use uniform quantization interval tablefor quantization error(mse), do the same for logarithmic quantization.
   - if calculating the quantization error for alexnet, please e sure that the corrent quantiztaion interval table is in './quant_interval_alexnet', and the same for other network model.
   - The calculated quantization interval table is saved in './channel_allcoation'. Need to move to './quant_interval_{}' when used. 
+  - The network_forward_inference() function can be rewritten according to the corresponding network inference process
 
 ### Experiment Result
 
