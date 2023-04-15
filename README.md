@@ -42,7 +42,7 @@
 
 * Related Function Descriptions
 
-  algorithm_wrap.py
+  algorithm_wrap.so
 
   ```python
   def channel_wise_bit_allocation_algorithm(
