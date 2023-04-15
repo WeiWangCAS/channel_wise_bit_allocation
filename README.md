@@ -8,19 +8,19 @@
   --gpuid: gpu id, type == int
   --flag: mode selection, type = int
   	flag == 0 is calculate the quantization interval
-    flag == 1 is calculate the quantization error(mse)
+  	flag == 1 is calculate the quantization error(mse)
   --model: network models selection, type == str
   	model == 'alexnet': experimenting with the AlexNet model
-    model == 'resnet18': experimenting with the ResNet18 model
-    model == 'vgg16': experimenting with the VGGNet16 model
+  	model == 'resnet18': experimenting with the ResNet18 model
+  	model == 'vgg16': experimenting with the VGGNet16 model
   --quant_mode: quantization method selectiom, type == str
   	quant_mode == 'uniform': use of uniform quantization
-    quant_mode == 'dorefa': use of dorefa quantization
-    quant_mode == 'log': use of logarithmic quantization
+  	quant_mode == 'dorefa': use of dorefa quantization
+  	quant_mode == 'log': use of logarithmic quantization
   --net_mode: quantization interval table is saved in'./quant_intval_{net_mode}', type == str
   	model == 'alexnet'	==> net_mode == 'alexnet'
-    model == 'resnet18'	==> net_mode == 'resnet'
-    model == 'vgg16'		==> net_mode == 'vgg'
+  	model == 'resnet18'	==> net_mode == 'resnet'
+  	model == 'vgg16'		==> net_mode == 'vgg'
   --reserve_interval: reserved interval is used for online iterative inference, type == int
   --alpha: weight of mean priority, type == int
   --beta: weight of std priority, type == int
