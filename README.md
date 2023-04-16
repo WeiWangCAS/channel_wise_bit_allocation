@@ -68,6 +68,7 @@
   - if calculating the quantization error for alexnet, please make sure that the corrent quantiztaion interval table is in './quant_interval_alexnet', and the same for other network model.
   - The calculated quantization interval table is saved in './channel_allcoation'. Need to move to './quant_interval_{}' (e.g. './quant_interval_alexnet/2.csv', './quant_interval_resnet/3.csv') when used. 
   - The network_forward_inference() function can be rewritten according to the corresponding network inference process
+  - The quantization interval table corresponding to the network model must be calculated in --flag 0 before the quantization error calculation of --flag 1 can be performed
 
 ### Experiment Result
 
